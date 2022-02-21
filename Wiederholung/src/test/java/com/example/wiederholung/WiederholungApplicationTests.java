@@ -1,4 +1,4 @@
-package com.example.Wiederholung;
+package com.example.wiederholung;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
