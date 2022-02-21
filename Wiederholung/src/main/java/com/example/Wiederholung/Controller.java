@@ -1,10 +1,9 @@
 package com.example.Wiederholung;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Set;
 
 @RequestMapping( "map" )
 @RestController
@@ -13,6 +12,13 @@ public class Controller {
     @GetMapping( "/key/{key}" )
     public String key( @PathVariable("key") String param ) {
         return MapService.string( param );
+    }
+    @GetMapping( "/add/{key}/{value}" )
+    public String add( @PathVariable("key") String param,  @PathVariable("value") String param2 ) {
+        return MapService.add( param, param2 );
+    }
+    @GetMapping( "/returnKeys" )
+    public Set<String> add() {return MapService.returnKeys( );
     }
 
 }
